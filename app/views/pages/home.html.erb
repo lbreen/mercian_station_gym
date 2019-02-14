@@ -1,2 +1,50 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_url "fitness_4" %>');">
+  <div class="banner-content">
+    <h1>Episkopi Station Sports and Fitness Centre</h1>
+    <br>
+    <p>Soldier Physical Performance Specialists</p>
+  </div>
+</div>
+
+<div class="overview">
+  <div class="overview-cell">
+    <div class=" overview-icon"><i class="far fa-calendar-alt"></i></div>
+    <p><strong>Weekly classes</strong></p>
+    <p>We offer various classes during the week to meet your physical needs!</p>
+    <a href="/">Discover our classes <i class="fas fa-caret-right"></i></a>
+  </div>
+  <div class="overview-cell">
+    <div class=" overview-icon"><i class="fas fa-dumbbell"></i></div>
+    <p><strong>Lone Soldier Training Programme</strong></p>
+    <p>We can provide various training programmes to help structure your physical training!</p>
+    <a href="/">Choose your programme <i class="fas fa-caret-right"></i></a>
+  </div>
+  <div class="overview-cell">
+    <div class=" overview-icon"><i class="far fa-newspaper"></i></div>
+    <p><strong>Latest news</strong></p>
+    <p>Stay updated with the latest news from the Episkopi Station Gym!</p>
+    <a href="/">Find out more <i class="fas fa-caret-right"></i></a>
+  </div>
+</div>
+
+<div class="cards" style="background-color: #FCF5E7;">
+  <div class="card">
+    <%= image_tag "fitness_1" %>
+    <h2>Title</h2>
+    <div class="card-info">
+      <p>Link to</p>
+    </div>
+  </div>
+  <div class="card">
+    <%= image_tag "fitness_2" %>
+    <div class="info">
+      <h2>Title</h2>
+    </div>
+  </div>
+  <div class="card">
+    <%= image_tag "fitness_3" %>
+    <div class="info">
+      <h2>Title</h2>
+    </div>
+  </div>
+</div>

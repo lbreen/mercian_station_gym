@@ -13,3 +13,16 @@
 @import "layouts/index";
 @import "components/index";
 @import "pages/index";
+
+h1 {
+  font-size: 4vw;
+  font-weight: bold;
+}
+
+p {
+  font-size: 16px;
+}
+
+a:hover {
+  text-decoration: none;
+}

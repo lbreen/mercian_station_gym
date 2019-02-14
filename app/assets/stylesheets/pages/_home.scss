@@ -1,1 +1,27 @@
-// Specific CSS for your home-page
+.overview {
+  display: flex;
+  flex-wrap: no-wrap;
+  justify-content: centre;
+  align-items: space-around;
+  text-align: center;
+}
+
+.overview-icon {
+  font-size: 84px;
+  color: #FD1015;
+}
+
+.overview-cell {
+  display: flex;
+  flex-direction: column;
+  flew-wrap: wrap;
+  padding: 24px;
+  margin: 12px;
+}
+
+.overview-cell a {
+  color: #FD1015;
+  &:hover {
+    opacity: 0.6;
+  }
+}

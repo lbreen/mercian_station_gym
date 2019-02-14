@@ -1,22 +1,18 @@
 .overview {
   display: flex;
-  flex-wrap: no-wrap;
-  justify-content: centre;
-  align-items: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
-}
-
-.overview-icon {
-  font-size: 84px;
-  color: #FD1015;
+  width: 100%;
+  padding: 24px 0;
 }
 
 .overview-cell {
-  display: flex;
   flex-direction: column;
-  flew-wrap: wrap;
-  padding: 24px;
-  margin: 12px;
+  width: 33.33333%;
+  flex: 1 0 280px;
+  padding: 36px;
 }
 
 .overview-cell a {
@@ -24,4 +20,23 @@
   &:hover {
     opacity: 0.6;
   }
+}
+.overview-icon {
+  font-size: 84px;
+  color: #FD1015;
+}
+
+.homepage-section {
+  text-align: center;
+  padding: 36px 0;
+}
+
+.section-title {
+  margin-bottom: 36px;
+}
+
+.section-description {
+  width: 60%;
+  margin-left: 20%;
+  font-size: 14px;
 }

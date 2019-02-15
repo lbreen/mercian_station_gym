@@ -11,8 +11,8 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Competitions", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "ATPS", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Competitions", competitions_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "APTS", apts_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Book a sesson", "#", class: "navbar-wagon-item navbar-wagon-link navbar-cta" %>
 
       <!-- Avatar with dropdown menu -->

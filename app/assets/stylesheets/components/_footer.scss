@@ -1,0 +1,16 @@
+.footer {
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: #EAEAEA;
+  padding: 36px;
+}
+
+.contact-details {
+  text-align: right;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

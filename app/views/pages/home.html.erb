@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_url "fitness_4" %>');">
+<div class="banner fullscreen-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_url "fitness_4" %>');">
   <div class="banner-content">
     <h1>Episkopi Station Sports and Fitness Centre</h1>
     <br>
@@ -6,7 +6,7 @@
   </div>
 </div>
 
-<div class="overview">
+<section class="overview">
   <div class="overview-cell">
     <div class="overview-icon"><i class="far fa-calendar-alt"></i></div>
     <div class="overview-information">
@@ -31,7 +31,7 @@
       <a href="/">Find out more <i class="fas fa-caret-right"></i></a>
     </div>
   </div>
-</div>
+</section>
 
 <section class="homepage-section" id="competition-schedule" style="background-color: #FCF5E7">
   <h2 class="section-title">Competition Schedule</h2>
@@ -59,7 +59,7 @@
       </div>
     </div>
   </div>
-  <%= link_to "Find out more", root_path, class: "btn btn-danger grow" %>
+  <%= link_to "Find out more", competitions_path, class: "btn btn-danger grow" %>
 </section>
 
 <section class="homepage-section" id="book-fitness-class">
@@ -117,7 +117,7 @@
       </div>
     </div>
   </div>
-  <%= link_to "Find out more", root_path, class: "btn btn-danger grow" %>
+  <%= link_to "Find out more", apts_path, class: "btn btn-danger grow" %>
 </section>
 
 

@@ -46,22 +46,27 @@
 .navbar-wagon-item {
   cursor: pointer;
   padding: 0 20px;
+  margin: 0 6px;
 }
 
 /* Navbar link */
 .navbar-wagon-link {
   color: #616668;
   font-size: 14px;
-  padding: 10px 40px;
+  padding: 12px 36px;
   border-radius: 30px;
   border: 1px solid $red;
-  background-color: $red;
-  color: white;
+  background-color: white;
+  color: $red;
 }
 .navbar-wagon-link:hover {
   opacity: 0.8;
-  color: white;
+  color: $red;
   text-decoration: none;
+}
+.navbar-cta {
+  background-color: $red !important;
+  color: white !important;
 }
 
 /* Dropdown menu */

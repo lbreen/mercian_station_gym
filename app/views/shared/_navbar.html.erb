@@ -11,9 +11,9 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Host", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Trips", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Competitions", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "ATPS", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Book a sesson", "#", class: "navbar-wagon-item navbar-wagon-link navbar-cta" %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
@@ -40,7 +40,7 @@
       </div>
     <% else %>
       <!-- Login link (when logged out) -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link navbar-cta" %>
     <% end %>
   </div>
 

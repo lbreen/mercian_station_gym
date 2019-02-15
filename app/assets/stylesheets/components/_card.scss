@@ -11,14 +11,11 @@
 }
 
 .card h2 {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
   margin: 0;
   text-align: center;
-  position: relative;
-  top: -100px;
-  color: white;
-  z-index: 2;
+  padding: 12px;
 }
 
 .card p {
@@ -27,12 +24,20 @@
   margin: 0;
 }
 
-.card .card-info {
+.card-info {
   padding: 16px;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
   position: relative;
+}
+
+.grow {
+  transition: all .2s ease-in-out;
+}
+.grow:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 

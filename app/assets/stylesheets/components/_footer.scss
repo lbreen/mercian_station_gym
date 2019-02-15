@@ -8,3 +8,9 @@
 .contact-details {
   text-align: right;
 }
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

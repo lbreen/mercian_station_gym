@@ -52,9 +52,15 @@
 .navbar-wagon-link {
   color: #616668;
   font-size: 14px;
+  padding: 10px 40px;
+  border-radius: 30px;
+  border: 1px solid $red;
+  background-color: $red;
+  color: white;
 }
 .navbar-wagon-link:hover {
-  color: #da552f;
+  opacity: 0.8;
+  color: white;
   text-decoration: none;
 }
 

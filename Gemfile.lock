@@ -221,6 +221,7 @@ DEPENDENCIES
   puma
   rails (= 5.2.2)
   rails_12factor
+  rake (~> 12.3, >= 12.3.2)
   redis
   sassc-rails
   simple_form

@@ -28,6 +28,9 @@ group :development, :test do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
+  gem 'better_errors', '~> 2.5', '>= 2.5.1'
 end
 
-gem 'rails_12factor', group: :production
+group :production do
+  gem 'rails_12factor'
+end

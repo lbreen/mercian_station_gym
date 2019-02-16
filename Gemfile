@@ -31,7 +31,3 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'better_errors', '~> 2.5', '>= 2.5.1'
 end
-
-group :production do
-  gem 'rails_12factor'
-end

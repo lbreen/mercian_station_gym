@@ -31,3 +31,6 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'better_errors', '~> 2.5', '>= 2.5.1'
 end
+
+gem 'sprockets'
+gem 'sprockets-es6'

@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_09_160406) do
+ActiveRecord::Schema.define(version: 2019_02_21_162125) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "competitions", force: :cascade do |t|
+    t.string "name"
+    t.text "description", default: ""
+    t.string "current_winner", default: ""
+    t.string "image", default: "bfc_crest.jpg"
+    t.boolean "contain_image", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

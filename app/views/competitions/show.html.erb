@@ -1,0 +1,25 @@
+<div class="wrapper" style="padding: 120px 0;" >
+  <ul class="breadcrumb-nav list-inline">
+    <li><%= link_to "All competitions", competitions_path %></li>
+    <li>></li>
+    <li><p><%= @competition.name %></p></li>
+  </ul>
+  <div class="competition-container">
+
+    <div class="competition-image card" style="margin-bottom: 24px;">
+      <%= image_tag @competition.image %>
+    </div>
+    <div class="competition-content card card-info">
+      <div class="competition-title">
+        <h2><%= @competition.name %></h2>
+      </div>
+      <div class="competition-info">
+        <p><%= @competition.description %></p>
+        <br>
+      </div>
+    </div>
+    <div class="competition-event-info card">
+      <h2><strong>Next event:</strong> INSERT NEXT EVENT</h2>
+    </div>
+  </div>
+</div>

@@ -1,10 +1,7 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[home competitions apts]
+  skip_before_action :authenticate_user!, only: %i[home apts]
 
   def home
-  end
-
-  def competitions
   end
 
   def apts

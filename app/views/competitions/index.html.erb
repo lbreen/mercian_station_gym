@@ -1,0 +1,30 @@
+<div class="wrapper">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_url "fitness_4.jpg" %>');">
+    <div class="banner-content">
+      <h1>BFC Competitions</h1>
+    </div>
+  </div>
+
+  <section class="page-content">
+    <% @competitions.each do |competition| %>
+      <%= link_to competition_path(competition.id) do %>
+        <div class="card-product grow">
+          <% if competition.contain_image? %>
+            <%= image_tag competition.image, style: "object-fit: contain !important" %>
+          <% else %>
+            <%= image_tag competition.image %>
+          <% end %>
+          <div class="card-product-info">
+            <h2><%= competition.name %></h2>
+            <p><%= competition.description %></p>
+            <% unless competition.current_winner.empty? %>
+              <p><strong>Current winner:</strong> <%= competition.current_winner %></p>
+            <% end %>
+            <p><strong>Next event:</strong> INSERT EVENT</p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </section>
+</div>
+

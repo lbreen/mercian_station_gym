@@ -28,9 +28,9 @@ ActiveRecord::Schema.define(version: 2019_03_04_191803) do
   create_table "events", force: :cascade do |t|
     t.string "title"
     t.string "location"
-    t.date "date"
-    t.time "time"
+    t.datetime "time"
     t.string "poc"
+    t.string "winner"
     t.bigint "competition_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false

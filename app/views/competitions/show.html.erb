@@ -19,7 +19,29 @@
       </div>
     </div>
     <div class="competition-event-info card">
-      <h2><strong>Next event:</strong> INSERT NEXT EVENT</h2>
+      <% if @next_event.nil? %>
+        <h2><strong>Next event:</strong> TBC </h2>
+      <% else %>
+        <h2><strong>Next event:</strong> <%= @next_event.title %></h2>
+        <p><strong>Date:</strong> <%= @next_event.time.strftime('%A %e %B %Y at %H:%M') %></p>
+        <p><strong>Location:</strong> <%= @next_event.location %></p>
+
+      <% end %>
+      <br>
+      <div class="divider"></div>
+      <h2>Previous events:</h2>
+
+      <% if @previous_events.empty? %>
+        <p>No previous events.</p>
+      <% else %>
+        <% @previous_events.each do |event| %>
+          <p><strong>Event:</strong> <%= event.title %></p>
+          <p><strong>Date:</strong> <%= event.time.strftime('%A %e %B %Y') %></p>
+          <p><strong>Winner:</strong> <%= event.winner %></p>
+          <br>
+          <div class="divider"></div>
+        <% end %>
+      <% end %>
     </div>
   </div>
 </div>

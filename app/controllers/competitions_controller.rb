@@ -7,6 +7,7 @@ class CompetitionsController < ApplicationController
   end
 
   def show
+    @previous_events = @competition.events.select { |e| e.time < DateTime.now }
   end
 
   private

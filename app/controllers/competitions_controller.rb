@@ -9,12 +9,6 @@ class CompetitionsController < ApplicationController
   def show
   end
 
-  def new
-  end
-
-  def create
-  end
-
   private
 
   def find_competition

@@ -1,0 +1,41 @@
+.competition-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+  grid-template-areas: "image content" "event event";
+  grid-gap: 48px;
+  margin: 48px;
+  margin-top: 24px;
+}
+
+@media (max-width: 768px) {
+  .competition-container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "image" "content" "event";
+  }
+}
+
+.competition-content {
+  grid-area: content;
+  padding: 0 36px;
+}
+.competition-image {
+  grid-area: image;
+  padding: 12px;
+  img {
+    height: unset !important;
+  }
+}
+.competition-title {
+  text-align: center;
+}
+.competition-info {
+  margin-top: 24px;
+}
+.competition-info > p {
+  font-size: 16px;
+}
+.competition-event-info {
+  padding: 36px;
+  grid-area: event;
+}

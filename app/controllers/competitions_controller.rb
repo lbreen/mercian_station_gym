@@ -3,11 +3,12 @@ class CompetitionsController < ApplicationController
   before_action :find_competition, only: %i[show create]
 
   def index
-    @competitions = Competition.all
+    @competitions = policy_scope(Competition)
   end
 
   def show
     @previous_events = @competition.events.select { |e| e.time < DateTime.now }
+    authorize @competition
   end
 
   private

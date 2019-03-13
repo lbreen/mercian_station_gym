@@ -1,4 +1,4 @@
-class CompetitionPolicy < ApplicationPolicy
+class UserPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
@@ -6,6 +6,10 @@ class CompetitionPolicy < ApplicationPolicy
   end
 
   def show?
-    true
+    user.admin?
+  end
+
+  def update?
+    user.admin?
   end
 end

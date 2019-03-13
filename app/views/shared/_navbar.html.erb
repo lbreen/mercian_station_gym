@@ -15,7 +15,6 @@
       <!-- Links when logged in -->
       <%= link_to "Book a sesson", "#", class: "navbar-wagon-item navbar-wagon-link navbar-cta" %>
 
-
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
@@ -31,6 +30,13 @@
                 <i class="fas fa-users"></i> My classes
               <% end %>
             </li>
+            <% if current_user.admin? %>
+              <li>
+                <%= link_to admin_root_path do %>
+                  <i class="fas fa-hammer"></i> Admin
+                <% end %>
+              </li>
+            <% end %>
             <li>
               <%= link_to destroy_user_session_path, method: :delete do %>
                 <i class="fas fa-sign-out-alt"></i>  <%= t(".sign_out", default: "Log out") %>

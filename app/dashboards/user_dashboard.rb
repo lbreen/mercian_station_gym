@@ -30,7 +30,8 @@ class UserDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :id,
     :email,
-    :admin
+    :admin,
+    :events
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -40,7 +41,8 @@ class UserDashboard < Administrate::BaseDashboard
     :email,
     :admin,
     :created_at,
-    :updated_at
+    :updated_at,
+    :events
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -49,14 +51,15 @@ class UserDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :events,
     :email,
-    :password,
-    :password_confirmation
+    :admin
+    # :password,
+    # :password_confirmation
   ].freeze
 
   # Overwrite this method to customize how users are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(user)
-  #   "User ##{user.id}"
-  # end
+  def display_resource(user)
+    user.email
+  end
 end

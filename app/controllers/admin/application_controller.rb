@@ -10,7 +10,7 @@ module Admin
     before_action :authenticate_user!
 
     def authenticate_admin
-      # TODO Add authentication logic here.
+      redirect_to root_path unless current_user.admin?
     end
 
     include Administrate::Punditize

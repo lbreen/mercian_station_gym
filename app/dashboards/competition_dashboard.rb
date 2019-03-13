@@ -60,7 +60,7 @@ class CompetitionDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how competitions are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(competition)
-  #   "Competition ##{competition.id}"
-  # end
+  def display_resource(competition)
+    competition.name
+  end
 end

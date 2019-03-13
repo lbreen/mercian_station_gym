@@ -20,7 +20,12 @@
             <% unless competition.current_winner.empty? %>
               <p><strong>Current winner:</strong> <%= competition.current_winner %></p>
             <% end %>
-            <p><strong>Next event:</strong> INSERT EVENT</p>
+            <% if competition.next_event.nil? %>
+
+              <p><strong>Next event:</strong> TBC</p>
+            <% else %>
+              <p><strong>Next event:</strong> <%= competition.next_event.title %></p>
+            <% end %>
           </div>
         </div>
       <% end %>

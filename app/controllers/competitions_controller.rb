@@ -7,12 +7,7 @@ class CompetitionsController < ApplicationController
   end
 
   def show
-  end
-
-  def new
-  end
-
-  def create
+    @previous_events = @competition.events.select { |e| e.time < DateTime.now }
   end
 
   private

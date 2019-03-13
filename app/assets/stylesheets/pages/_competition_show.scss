@@ -38,4 +38,7 @@
 .competition-event-info {
   padding: 36px;
   grid-area: event;
+  p {
+    font-size: 16px !important;
+  }
 }

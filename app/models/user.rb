@@ -5,4 +5,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :events
+
+  validates :first_name, :last_name, presence: true
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
 end

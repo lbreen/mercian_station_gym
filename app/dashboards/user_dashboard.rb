@@ -19,7 +19,9 @@ class UserDashboard < Administrate::BaseDashboard
     updated_at: Field::DateTime,
     admin: Field::Boolean,
     password: PasswordField,
-    password_confirmation: PasswordField
+    password_confirmation: PasswordField,
+    first_name: Field::String,
+    last_name: Field::String
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -30,6 +32,8 @@ class UserDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :id,
     :email,
+    :first_name,
+    :last_name,
     :admin,
     :events
   ].freeze
@@ -39,6 +43,8 @@ class UserDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :id,
     :email,
+    :first_name,
+    :last_name,
     :admin,
     :created_at,
     :updated_at,
@@ -51,6 +57,8 @@ class UserDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :events,
     :email,
+    :first_name,
+    :last_name,
     :admin
     # :password,
     # :password_confirmation
@@ -60,6 +68,6 @@ class UserDashboard < Administrate::BaseDashboard
   # across all pages of the admin dashboard.
   #
   def display_resource(user)
-    user.email
+    user.full_name
   end
 end
